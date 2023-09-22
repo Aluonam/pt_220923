@@ -10,6 +10,8 @@ const InputContador = () => {
 
     const [passwordData, setPasswordData] = useState("")
 
+    
+    
   return (
     <>
 
@@ -17,6 +19,7 @@ const InputContador = () => {
 
     <input type='number' onChange={(e)=>{setInputUserData(e.target.value)}}></input>
 
+    
     <button onClick={()=>{setNumeroContador(numeroContador + 1)}}> + </button>
     <button onClick={()=>{setNumeroContador(numeroContador - 1)}}> - </button>
 
