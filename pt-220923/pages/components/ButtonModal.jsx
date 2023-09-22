@@ -2,24 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { Button, Modal } from 'antd';
 
 
-const ButtonModal = ({inputUserData, numeroContador}) => {
-
-    useEffect(() => {
-      llamadaAPI()
-    }, [])
-    
-
-    const llamadaAPI = async () =>{
-        try{
-            const id = inputUserData
-            const llamada = await fetch(`https://picsum.photos/id/${id}/200`);
-            const data = await llamada.json();
-            console.log(data)
-        }catch(error){"error detected", error}
-    }
-
-    
-
+const ButtonModal = ({inputUserData, numeroContador, passwordData}) => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
@@ -39,9 +22,12 @@ const ButtonModal = ({inputUserData, numeroContador}) => {
       <Button type="primary" onClick={showModal}>
        Botón Modal
       </Button>
-      <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-        
+      <Modal title="Contraseña y contador:" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+
+
+        <div>{passwordData}</div>
         <div>{numeroContador}</div>
+        <img src={`https://picsum.photos/id/${inputUserData}/200`}></img>
 
       </Modal>
     </>
