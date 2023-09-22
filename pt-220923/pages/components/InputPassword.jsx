@@ -3,7 +3,7 @@ import React from 'react'
 const InputPassword = () => {
   return (
     <>
-    <input type='password'></input>
+    
     </>
   )
 }

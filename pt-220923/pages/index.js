@@ -2,7 +2,6 @@ import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import InputPassword from './components/InputPassword'
 import InputContador from './components/InputContador'
-import ButtonModal from './components/ButtonModal'
 
 
 export default function Home() {
@@ -18,7 +17,6 @@ export default function Home() {
 
         <InputPassword></InputPassword>
         <InputContador></InputContador>
-        <ButtonModal></ButtonModal>
         
       </main>
     </>
